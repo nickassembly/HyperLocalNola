@@ -48,13 +48,14 @@ namespace HyperLocalNola
             app.UseHsts();
          }
 
-         // TODO: Add Routing
+         
 
          app.UseHttpsRedirection();
          app.UseStaticFiles();
          app.UseCookiePolicy();
 
          app.UseMvc();
+        
       }
    }
 }
