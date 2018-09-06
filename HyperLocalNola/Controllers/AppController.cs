@@ -5,19 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HyperLocalNola
+namespace HyperLocalNola.Controllers
 {
+  
     public class AppController : Controller
     {
-        public IActionResult Index()
-        {
-          return View();
-        }
-        
-      [HttpGet("music")]
-        public IActionResult Music()
-        {
+
+      public IActionResult Index()
+      {
          return View();
-        }
+      }
+
+      public IActionResult Music()
+      {
+         return View();
+      }
+
+
     }
 }
