@@ -18,26 +18,23 @@
 </head>
 
 <!--Currently navigation to /app/music brings up the music page but clicking the link
-    does not. 
+    does not.
     TODO: Re-structure the routing using nickportfolio as a base. Go through controllers
     and views side by side testing after any change.
     Research Class level routing the add [{Controller}] Routing decorations
     -->
-
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">HyperLocalNola</a>
+        <a class="navbar-brand" asp-controller="App" asp-action="Index">HyperLocalNola</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  
-                </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="App" asp-action="Index">Music</a>
+                    <a class="nav-link" asp-controller="App" asp-action="Music">Music</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Food</a>
@@ -50,89 +47,38 @@
     </div>
 </nav>
 
-<header>
-    
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class=" active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            
-            <div class="carousel-item active" style="background-image: url('./images/levee.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 class="display-4">Go Local</h3>
-                    <p class="lead">Get the best local products and services.</p>
-                </div>
-            </div>
-            
-            <div class="carousel-item" style="background-image: url('./images/sunsetNola.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 class="display-4">Discover Local</h3>
-                    <p class="lead">Go where the locals go by exploring local businesses</p>
-                </div>
-            </div>
-            
-            <div class="carousel-item" style="background-image: url('./images/sunset2Nola.jpg')">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3 class="display-4">Enjoy Local</h3>
-                    <p class="lead">Enjoy the best local music, food and products, delivered right to your door.</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+<body>
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - HyperLocalNola</p>
+        </footer>
     </div>
-</header>
 
-<section class="py-5">
-    <div class="container">
-        <h1 class="display-4">HyperLocalNola</h1>
-        <p class="lead">Immerse yourself in the great food and culture that the city of New Orleans has to offer. 
-        HyperLocalNola brings you right to the street level of the most interesting place around.</p>
-    </div>
-</section>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
 
-    <body>
-
-        <partial name="_CookieConsentPartial" />
-
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; 2018 - HyperLocalNola</p>
-            </footer>
-        </div>
-
-        <environment include="Development">
-            <script src="~/lib/jquery/dist/jquery.js"></script>
-            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/js/site.js" asp-append-version="true"></script>
-        </environment>
-        <environment exclude="Development">
-            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery"
-                    crossorigin="anonymous"
-                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-            </script>
-            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                    crossorigin="anonymous"
-                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-            </script>
-            <script src="~/js/site.min.js" asp-append-version="true"></script>
-        </environment>
-
-        @RenderSection("Scripts", required: false)
-    </body>
+    @RenderSection("Scripts", required: false)
+</body>
 </html>
