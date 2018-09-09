@@ -31,11 +31,12 @@ body {
     padding-right: 15px;
 }
 
-/*Music Page Elements*/
-.mgmeBanner{
-    width: 200px;
-    height: 200px;
- 
+/*Header Styles*/
+
+.banner{
+    width: 100%;
+    height: auto;
+   
 }
 
 
