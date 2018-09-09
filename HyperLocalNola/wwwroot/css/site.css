@@ -32,14 +32,10 @@ body {
 }
 
 /*Header Styles*/
-
 .banner{
-    width: 100%;
-    height: auto;
-   
+    width:600px;
+    height:100px;
 }
-
-
 
 .card {
     margin: 0 auto; /* Added */
