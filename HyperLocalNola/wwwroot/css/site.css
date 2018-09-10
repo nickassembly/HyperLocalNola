@@ -37,6 +37,11 @@ body {
     height:100px;
 }
 
+.productHeader {
+    width: 50%;
+    height:50%;
+}
+
 .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
