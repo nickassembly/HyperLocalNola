@@ -18,6 +18,12 @@ namespace HyperLocalNola.Controllers
          return View();
       }
 
+      [HttpGet("products")]
+      public IActionResult Products()
+      {
+         return View();
+      }
+
 
    }
 }
