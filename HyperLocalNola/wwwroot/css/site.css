@@ -34,12 +34,14 @@ body {
 /*Header Styles*/
 .banner{
     width:600px;
-    height:100px;
+    height:200px;
+  color:red;
 }
 
 .productHeader {
     width: 50%;
     height:50%;
+    align-content:center;
 }
 
 .card {
