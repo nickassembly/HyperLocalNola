@@ -24,6 +24,18 @@ namespace HyperLocalNola.Controllers
          return View();
       }
 
+      [HttpGet("technology")]
+      public IActionResult Technology()
+      {
+         return View();
+      }
+
+      [HttpGet("design")]
+      public IActionResult Design()
+      {
+         return View();
+      }
+
 
    }
 }
