@@ -30,12 +30,5 @@ namespace HyperLocalNola.Controllers
          return View();
       }
 
-      [HttpGet("design")]
-      public IActionResult Design()
-      {
-         return View();
-      }
-
-
    }
 }

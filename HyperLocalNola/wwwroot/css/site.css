@@ -49,3 +49,11 @@ body {
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
 }
+
+/*Technology Consultation Page*/
+.technology-logo {
+    width: 30%;
+    height: 30%;
+    margin-left:30%;
+  
+}
